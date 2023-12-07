@@ -70,7 +70,7 @@
         <h3>Overview</h3>
     </div>
     <figure style="font-style: italic; font-weight: normal; margin: 0px; padding: 0px; border: 0px">
-        <video width="90%" controls style="margin-left: auto; margin-right: auto; display: block;">
+        <video width="90%" controls preload="metadata" style="margin-left: auto; margin-right: auto; display: block;">
             <source src="./vids/overview.mp4" type="video/mp4">
         </video>
     </figure>
@@ -84,7 +84,7 @@
         <figcaption style="margin-bottom: 20px">
             We render novel views from the Workshop scene in the <a href="https://github.com/facebookresearch/EyefulTower">Eyeful Tower</a> dataset. Since we train with HDR images, we are able to render the scene at different exposures.
         </figcaption>
-        <video width="90%" controls style="margin-left: auto; margin-right: auto; display: block;">
+        <video width="90%" controls preload="metadata" style="margin-left: auto; margin-right: auto; display: block;">
             <source src="./vids/workshop-overview.mp4" type="video/mp4">
         </video>
     </figure>
@@ -102,7 +102,7 @@
         <figcaption style="margin-bottom: 20px" id="eyeful-comparison">
             Our quality is slightly better than <a href="https://vr-nerf.github.io/">VR-NeRF</a> while rendering over 10x faster. Our results are significantly better than faster rendering approaches, especially when modeling specular effects.
         </figcaption>
-        <video width="90%" controls style="margin-left: auto; margin-right: auto; display: block;" id="eyeful-video">
+        <video width="90%" controls preload="metadata" style="margin-left: auto; margin-right: auto; display: block;" id="eyeful-video">
             <source src="./vids/workshop.mp4" type="video/mp4">
         </video>
     </figure>
@@ -117,7 +117,7 @@
         <figcaption style="margin-bottom: 20px">
             We evaluate <a href="https://cy94.github.io/scannetpp/">ScanNet++</a> as another dataset built from high-resolution captures of indoor scenes. <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a> struggles with reflections and far-field content. Our method performs the best overall while exceeding the 36 FPS target frame rate for VR.
         </figcaption>
-        <video width="90%" controls style="margin-left: auto; margin-right: auto; display: block;" id="snpp-video">
+        <video width="90%" controls preload="metadata" style="margin-left: auto; margin-right: auto; display: block;" id="snpp-video">
             <source src="./vids/snpp_98b4ec142f.mp4" type="video/mp4">
         </video>
     </figure>
@@ -132,7 +132,7 @@
         <figcaption style="margin-bottom: 20px">
             We also evaluate HybridNeRF against the <a href="https://jonbarron.info/mipnerf360/">Mip-NeRF 360</a> dataset, where our approach performs comparably to other state of the art methods. We render novel camera trajectories that show how volume-based methods such as <a href="https://nvlabs.github.io/instant-ngp/">iNGP</a> "cheat" when modeling apparent surfaces. Our method renders faster and generates more plausible surface geometry.
         </figcaption>
-        <video width="90%" controls style="margin-left: auto; margin-right: auto; display: block;" id="m360-video">
+        <video width="90%" controls preload="metadata" style="margin-left: auto; margin-right: auto; display: block;" id="m360-video">
             <source src="./vids/stump.mp4" type="video/mp4">
         </video>
     </figure>
