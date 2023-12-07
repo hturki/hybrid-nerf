@@ -32,6 +32,8 @@ office_view1.addEventListener('click',function(e) {
   office_view1.className = "selected-scene";
 });
 
+eyefulVideo.poster = "./images/workshop.jpg";
+
 const snppVideo = document.getElementById("snpp-video");
 const snpp_98b4ec142f = document.getElementById("98b4ec142f");
 const snpp_b20a261fdf = document.getElementById("b20a261fdf");
@@ -49,6 +51,8 @@ snpp_b20a261fdf.addEventListener('click',function(e){
   snpp_98b4ec142f.className = "";
   snpp_b20a261fdf.className = "selected-scene";
 });
+
+snppVideo.poster = "./images/snpp_98b4ec142f.jpg";
 
 const m360Video = document.getElementById("m360-video");
 const stump = document.getElementById("stump");
@@ -78,3 +82,7 @@ kitchen.addEventListener('click',function(e){
   treehill.className = "";
   kitchen.className = "selected-scene";
 });
+
+m360Video.poster = "./images/stump.jpg";
+
+
