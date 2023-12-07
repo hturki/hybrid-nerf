@@ -14,7 +14,6 @@
           content="Neural radiance fields provide state-of-the-art view synthesis quality but tend to be slow to render. One reason is that they make use of volume rendering, thus requiring many samples (and model queries) per ray at render time. Although this representation is flexible and easy to optimize, most real-world objects can be modeled more efficiently with surfaces instead of volumes, requiring far fewer samples per ray. This observation has spurred considerable progress in surface representations such as signed distance functions, but these may struggle to model semi-opaque and thin structures. We propose a method, HybridNeRF, that leverages the strengths of both representations by rendering most objects as surfaces while modeling the (typically) small fraction of challenging regions volumetrically. We evaluate HybridNeRF against the challenging Eyeful Tower dataset along with other commonly used view synthesis datasets. When comparing to state-of-the-art baselines, including recent rasterization-based approaches, we improve error rates by 15–30% while achieving real-time framerates (at least 36 FPS) for virtual- reality resolutions (2K×2K)."/>
     <meta property="og:image" content="https://haithemturki.com/hybrid-nerf/images/teaser.gif">
     <meta property="og:url" content="https://haithemturki.com/hybrid-nerf">
-    <meta property="og:image:type" content="image/gif">
     <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFX77EN7S4"></script>
 <script>
@@ -85,7 +84,7 @@
         <figcaption style="margin-bottom: 20px">
             We render novel views from the Workshop scene in the <a href="https://github.com/facebookresearch/EyefulTower">Eyeful Tower</a> dataset. Since we train with HDR images, we are able to render the scene at different exposures.
         </figcaption>
-        <video width="90%" controls style="margin-left: auto; margin-right: auto; display: block;">
+        <video width="90%" controls style="margin-left: auto; margin-right: auto; display: block;" poster="./images/workshop-overview.jpg">
             <source src="./vids/workshop-overview.mp4" type="video/mp4">
         </video>
     </figure>
@@ -104,7 +103,7 @@
             Our quality is slightly better than <a href="https://vr-nerf.github.io/">VR-NeRF</a> while rendering over 10x faster. Our results are significantly better than faster rendering approaches, especially when modeling specular effects.
         </figcaption>
         <video width="90%" controls style="margin-left: auto; margin-right: auto; display: block;" id="eyeful-video">
-            <source src="./vids/workshop.mp4" type="video/mp4">
+            <source src="./vids/workshop.mp4" type="video/mp4" poster="./images/workshop.jpg">
         </video>
     </figure>
 </div>
@@ -119,7 +118,7 @@
             We evaluate <a href="https://cy94.github.io/scannetpp/">ScanNet++</a> as another dataset built from high-resolution captures of indoor scenes. <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a> struggles with reflections and far-field content. Our method performs the best overall while exceeding the 36 FPS target frame rate for VR.
         </figcaption>
         <video width="90%" controls style="margin-left: auto; margin-right: auto; display: block;" id="snpp-video">
-            <source src="./vids/snpp_98b4ec142f.mp4" type="video/mp4">
+            <source src="./vids/snpp_98b4ec142f.mp4" type="video/mp4" poster="./images/snpp_98b4ec142f.jpg">
         </video>
     </figure>
 </div>
@@ -134,26 +133,26 @@
             We also evaluate HybridNeRF against the <a href="https://jonbarron.info/mipnerf360/">Mip-NeRF 360</a> dataset, where our approach performs comparably to other state of the art methods. We render novel camera trajectories that show how volume-based methods such as <a href="https://nvlabs.github.io/instant-ngp/">iNGP</a> "cheat" when modeling apparent surfaces. Our method renders faster and generates more plausible surface geometry.
         </figcaption>
         <video width="90%" controls style="margin-left: auto; margin-right: auto; display: block;" id="m360-video">
-            <source src="./vids/stump.mp4" type="video/mp4">
+            <source src="./vids/stump.mp4" type="video/mp4" poster="./images/stump.jpg">
         </video>
     </figure>
 </div>
 
-<!-- <div class="content">
+<div class="content">
     <div style="text-align: center; padding-bottom:20px">
         <h3>Citation</h3>
     </div>
     <figure style="font-weight: normal; text-align:center">
-        <pre><code>misc{turki2023hybridnerf,
-                      title={HybridNeRF: Efficient Neural Rendering via Adaptive Volumetric Surfaces},
-                      author={Haithem Turki and Jason Y. Zhang and Francesco Ferroni and Deva Ramanan},
-                      year={2023},
-                      eprint={2303.14536},
-                      archivePrefix={arXiv},
-                      primaryClass={cs.CV}
-        }</code></pre>
+        <pre><code>@misc{turki2023hybridnerf,
+      title={HybridNeRF: Efficient Neural Rendering via Adaptive Volumetric Surfaces}, 
+      author={Haithem Turki and Vasu Agrawal and Samuel Rota Bulò and Lorenzo Porzi and Peter Kontschieder and Deva Ramanan and Michael Zollh\"{o}fer and Christian Richardt},
+      year={2023},
+      eprint={2312.03160},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code></pre>
     </figure>
-  </div> -->
+  </div>
 
 <script src="resources/handler.js"></script>
 
